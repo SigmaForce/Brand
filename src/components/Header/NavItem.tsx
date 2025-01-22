@@ -14,7 +14,14 @@ export const NavItem = ({
   ...rest
 }: NavItemProps) => {
   return (
-    <li className={cn("", isActive && "", className)} {...rest}>
+    <li
+      className={cn(
+        "text-white  transition-all duration-200 ease-in-out",
+        isActive && "border-b-2 border-brand-light ",
+        className
+      )}
+      {...rest}
+    >
       <a href={href}>{children}</a>
     </li>
   );
